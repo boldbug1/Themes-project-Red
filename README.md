@@ -13,3 +13,7 @@ a collection of themes made by community for project-red.
 _(name of the ```.css``` file must be style.css)_
 
 _Note : You can only use one theme at a time._
+
+## Contribution 
+
+Read ```CONTRIBUTING.MD``` before contributing.
