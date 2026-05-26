@@ -1,0 +1,451 @@
+/*Medivel-delight*/
+:root[data-theme="dark"] {
+    
+    --bg-base: #0B0C10;        
+    --bg-surface: #12141C;     
+    --bg-sidebar: #1A1D28;     
+    --border-color: #E2B13C;   
+    --text-primary: #F4F4F6;   
+    --text-secondary: #8E94A2; 
+    --accent-color: #E2B13C;   
+    --accent-hover: #F1C453;
+    --code-bg: #181A22;
+}
+
+:root[data-theme="light"] {
+    
+    --bg-base: #F4EFE6;        
+    --bg-surface: #FCFAF2;     
+    --bg-sidebar: #EBE5D5;     
+    --border-color: #2B261F;   
+    --text-primary: #1C1915;   
+    --text-secondary: #5A5345; 
+    --accent-color: #9E2A2B;   
+    --accent-hover: #BE3E40;
+    --code-bg: #EFE9DC;        
+}
+
+/* --- Base Resets & Professional Typography --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    padding-bottom: 4rem;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Comprehensive Widescreen Main Layout Window */
+.node-container {
+    width: 94%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* --- Header System --- */
+.node-header {
+    background-color: var(--bg-sidebar);
+    border-bottom: 3px double var(--border-color); /* 90s Multi-line Retro Trim */
+    padding: 1.25rem 0;
+}
+
+.header-container {
+    width: 94%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand h1 {
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.node-badge {
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-size: 0.75rem;
+    color: var(--text-primary);
+    background-color: var(--bg-base);
+    padding: 0.2rem 0.6rem;
+    border: 2px solid var(--border-color); /* Tactile frame */
+    border-radius: 0px; /* Sharp retro geometry */
+    margin-top: 0.35rem;
+}
+
+/* --- Premium Theme Switcher Button --- */
+.toggle-btn {
+    background: var(--bg-base);
+    border: 2px solid var(--border-color);
+    border-radius: 0px; /* Hard retro edge */
+    cursor: pointer;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+    background-color: var(--bg-sidebar);
+}
+
+.icon-polarized {
+    width: 16px;
+    height: 16px;
+    border-radius: 0%; /* Absolute square geometry */
+    background: linear-gradient(90deg, var(--text-primary) 50%, transparent 50%);
+    border: 2px solid var(--text-primary);
+}
+
+/* --- Structured Metadata Ribbon Dashboard --- */
+.metadata-ribbon {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    background-color: var(--bg-surface);
+    padding: 1.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0px;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.meta-item .label {
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    color: var(--text-secondary);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.meta-item .value {
+    word-break: break-all;
+    color: var(--text-primary);
+}
+
+.meta-item .identity,
+.meta-item .hash {
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    color: var(--accent-color);
+}
+
+.divider {
+    border: 0;
+    border-top: 2px dashed var(--border-color); /* Codex line break aesthetic */
+    margin: 2.5rem 0;
+}
+
+/* --- Elevated Markdown Document Layout Panel --- */
+.markdown-body {
+    background-color: var(--bg-surface);
+    padding: 3rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3 {
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    color: var(--text-primary);
+    margin-top: 2rem;
+    margin-bottom: 1.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.markdown-body h1 {
+    font-size: 2rem;
+    border-bottom: 3px double var(--border-color);
+    padding-bottom: 0.5rem;
+}
+.markdown-body h2 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid var(--text-secondary);
+}
+.markdown-body h3 {
+    font-size: 1.2rem;
+}
+
+.markdown-body p {
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+    text-align: justify; /* Text density like an early print setup */
+}
+
+/* High-Scannability Technical Lists */
+.markdown-body ul,
+.markdown-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.markdown-body li {
+    margin-bottom: 0.5rem;
+}
+
+/* Inline Code Elements Configuration */
+.markdown-body code {
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    background-color: var(--code-bg);
+    padding: 0.15rem 0.4rem;
+    font-size: 0.88rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0px;
+    display: inline-block;
+    line-height: 1.3;
+    vertical-align: middle;
+}
+
+/* Fully Isolated Technical Code Block Containers */
+.markdown-body pre {
+    background-color: var(--code-bg);
+    padding: 1.25rem;
+    overflow-x: auto;
+    border: 2px solid var(--border-color);
+    border-radius: 0px;
+    margin-bottom: 2rem;
+}
+
+.markdown-body pre code {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    display: block;
+    line-height: 1.6;
+}
+
+/* --- Centered Visual Assets --- */
+.markdown-body img {
+    display: block; 
+    margin: 1.5rem auto; 
+    max-width: 100%;
+    height: auto;
+    border-radius: 0px;
+    border: 2px solid var(--border-color);
+}
+
+/* --- Social Curation Footer Box --- */
+.curation-footer {
+    text-align: center;
+    background-color: var(--bg-surface);
+    padding: 2.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0px;
+}
+
+.curation-footer p {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    color: var(--text-secondary);
+}
+
+.action-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--bg-base); /* High-contrast inversed type */
+    text-decoration: none;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-weight: bold;
+    padding: 0.8rem 1.75rem;
+    border: 2px solid var(--text-primary);
+    border-radius: 0px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.action-button:hover {
+    background-color: var(--accent-hover);
+    cursor: pointer;
+}
+
+.download-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    font-weight: bold;
+}
+.download-link:hover {
+    text-decoration: underline;
+}
+
+/* --- Off-Canvas Advanced Sidebar Navigator --- */
+/* (Structural transitions, positions, transforms, and z-indices are left completely untouched) */
+.side-panel {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 320px;
+    height: 100vh;
+    background-color: var(--bg-sidebar);
+    border-right: 3px double var(--border-color);
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    padding: 2rem 1.5rem;
+    overflow-y: auto;
+}
+
+.side-panel.open {
+    left: 0;
+}
+
+.side-panel-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(11, 12, 16, 0.8);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.side-panel-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.side-guide-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.panel-link {
+    font-family: ui-monospace, SFMono-Regular, monospace;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0.15);
+    border: 1px solid transparent;
+    transition: all 0.15s ease;
+    font-size: 0.88rem;
+}
+
+.panel-link:hover {
+    border-color: var(--border-color);
+    background-color: var(--bg-base);
+    color: var(--accent-color);
+}
+
+/* --- Document Tree Collapse Accordions --- */
+.panel-folder {
+    border: 1px solid var(--border-color);
+    border-radius: 0px;
+    background-color: var(--bg-base);
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+}
+
+/* Unified Folder Header Layout */
+.panel-folder-header {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    user-select: none;
+    transition: background-color 0.15s ease, color 0.15s ease;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+}
+
+/* DARK MODE SPECIFIC HEADER */
+:root[data-theme="dark"] .panel-folder-header {
+    background-color: rgba(26, 29, 40, 0.8);
+    color: var(--text-primary);
+}
+:root[data-theme="dark"] .panel-folder-header:hover {
+    background-color: rgba(226, 177, 60, 0.1);
+    color: var(--accent-color);
+}
+
+/* LIGHT MODE SPECIFIC HEADER */
+:root[data-theme="light"] .panel-folder-header {
+    background-color: #E5DDCB; 
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+:root[data-theme="light"] .panel-folder-header:hover {
+    background-color: #D6CBB5;
+    color: var(--accent-color);
+}
+
+/* Abstract Vector Indicator (Standard geometric logic untouched) */
+.folder-icon {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-top: 2px solid var(--text-secondary);
+    border-right: 2px solid var(--text-secondary);
+    transform: rotate(45deg); 
+    transition: transform 0.2s ease, border-color 0.15s ease;
+}
+
+.panel-folder-header:hover .folder-icon {
+    border-color: currentColor;
+}
+
+.panel-folder-header.active .folder-icon {
+    transform: rotate(135deg);
+}
+
+.panel-folder-content {
+    display: none;
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 0.4rem;
+}
+
+.panel-folder-content.open {
+    display: flex;
+    border-top: 1px dashed var(--border-color);
+}
+
+.panel-folder-content .panel-link {
+    padding: 0.5rem 0.8rem 0.5rem 1.5rem;
+}
+
+/* --- Centered Automated Diagram Vector Layout Canvas --- */
+.mermaid {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    background-color: var(--bg-base);
+    border: 2px dashed var(--border-color); /* Cartographic drafting aesthetic */
+    border-radius: 0px;
+    padding: 1.5rem;
+    margin: 2rem auto; 
+    overflow-x: auto;
+}
